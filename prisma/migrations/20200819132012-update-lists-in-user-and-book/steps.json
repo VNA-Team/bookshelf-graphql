@@ -1,0 +1,29 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "User",
+      "field": "listItems",
+      "type": "ListItem",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "User",
+      "field": "lists"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Book",
+      "field": "listItems",
+      "type": "ListItem",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Book",
+      "field": "lists"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+generator prisma_client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["transactionApi", "connectOrCreate", "insensitiveFilters"]
+}
+
+datasource db {
+    provider = "postgres"
+    url = "***"
+}
+
+model User {
+    id               String    @id @default(uuid())
+    email            String    @unique
+    password         String
+}

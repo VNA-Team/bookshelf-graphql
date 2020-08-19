@@ -1,0 +1,8 @@
+# Prisma Migrate lockfile v1
+
+20200819102122-init
+20200819102510-add-book-model
+20200819112536-add-list-model
+20200819131928-change-list-to-listitem
+20200819132012-update-lists-in-user-and-book
+20200819132843-allow-listitem-finishdate-to-be-null

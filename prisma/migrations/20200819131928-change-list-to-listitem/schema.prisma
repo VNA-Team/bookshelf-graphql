@@ -1,0 +1,39 @@
+generator prisma_client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["transactionApi", "connectOrCreate", "insensitiveFilters"]
+}
+
+datasource db {
+    provider = "postgres"
+    url = "***"
+}
+
+model User {
+    id       String     @id @default(uuid())
+    email    String     @unique
+    password String
+    lists    ListItem[]
+}
+
+model Book {
+    id            String     @id @default(uuid())
+    title         String
+    author        String
+    coverImageUrl String
+    pageCount     Int
+    publisher     String
+    synopsis      String
+    lists         ListItem[]
+}
+
+model ListItem {
+    id         String   @id @default(uuid())
+    bookId     String
+    book       Book     @relation(references: [id], fields: [bookId])
+    ownerId    String
+    owner      User     @relation(references: [id], fields: [ownerId])
+    rating     Int?
+    notes      String?
+    startDate  DateTime @default(now())
+    finishDate DateTime @default(now())
+}
