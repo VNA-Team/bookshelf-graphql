@@ -16,7 +16,7 @@
     "type-check": "tsc --noEmit"
   },
   "keywords": [],
-  "author": "Khanh Le",
+  "author": "VNA Team",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.0",
